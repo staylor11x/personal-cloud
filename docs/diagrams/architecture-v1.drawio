@@ -1,0 +1,239 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="5c2TMuMSTC84zymVg3yz" name="Page-1">
+    <mxGraphModel dx="1664" dy="916" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1654" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=18;fontStyle=1;fontColor=#1a1a2e;" value="Personal Cloud Platform — Architecture v1" vertex="1">
+          <mxGeometry height="36" width="600" x="40" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="leg1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=11;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="24" width="80" x="700" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="leg2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=11;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="24" width="80" x="792" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="leg3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#085041;strokeColor=none;fontColor=#9FE1CB;fontSize=11;fontStyle=1;" value="Phase 3" vertex="1">
+          <mxGeometry height="24" width="80" x="884" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="leg4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#854F0B;strokeColor=none;fontColor=#FAC775;fontSize=11;fontStyle=1;" value="Phase 4" vertex="1">
+          <mxGeometry height="24" width="80" x="976" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="leg5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5F5E5A;strokeColor=none;fontColor=#D3D1C7;fontSize=11;fontStyle=1;" value="Phase 5" vertex="1">
+          <mxGeometry height="24" width="80" x="1068" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="leg6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#854F0B;fontColor=#854F0B;fontSize=11;fontStyle=2;dashed=1;" value="Stretch goal" vertex="1">
+          <mxGeometry height="24" width="100" x="1160" y="36" as="geometry" />
+        </mxCell>
+        <mxCell id="home_network" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#888780;strokeWidth=2;dashed=1;dashPattern=10 6;verticalAlign=top;fontSize=13;fontStyle=3;fontColor=#888780;" value="" vertex="1">
+          <mxGeometry height="920" width="1020" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="home_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=12;fontColor=#888780;fontStyle=2;" value="Home network" vertex="1">
+          <mxGeometry height="20" width="160" x="54" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="dell_boundary" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#7F77DD;strokeWidth=2;dashed=1;dashPattern=8 4;opacity=20;" value="" vertex="1">
+          <mxGeometry height="686" width="900" x="66" y="112" as="geometry" />
+        </mxCell>
+        <mxCell id="dell_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=13;fontColor=#3C3489;fontStyle=1;" value="Dell N3710 · k3s single-node cluster · Ubuntu Server · 8 GB RAM" vertex="1">
+          <mxGeometry height="20" width="580" x="80" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="dell_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=10;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="20" width="56" x="487" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="ingress" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;strokeWidth=1.5;fontSize=12;fontColor=#0C447C;verticalAlign=middle;" value="&lt;b&gt;Traefik ingress + cert-manager&lt;/b&gt;&lt;br&gt;Automatic TLS · Let&#39;s Encrypt · internal service routing" vertex="1">
+          <mxGeometry height="52" width="780" x="82" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="ingress_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="20" width="56" x="82" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="authentik" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;strokeWidth=1.5;fontSize=12;fontColor=#0C447C;verticalAlign=middle;" value="&lt;b&gt;Authentik SSO&lt;/b&gt;&lt;br&gt;OIDC · all internal services protected&lt;br&gt;No service accessible without authentication" vertex="1">
+          <mxGeometry height="68" width="375" x="82" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="authentik_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="18" width="56" x="82" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="argocd" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;strokeWidth=1.5;fontSize=12;fontColor=#3C3489;verticalAlign=middle;" value="&lt;b&gt;ArgoCD + GitHub Actions runner&lt;/b&gt;&lt;br&gt;GitOps CD · self-hosted CI runner on cluster&lt;br&gt;Declarative · no manual kubectl apply" vertex="1">
+          <mxGeometry height="68" width="375" x="487" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="argocd_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=10;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="18" width="56" x="487" y="218" as="geometry" />
+        </mxCell>
+        <mxCell id="observability" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;strokeWidth=1.5;fontSize=12;fontColor=#0C447C;verticalAlign=middle;" value="&lt;b&gt;Prometheus · Grafana · Loki&lt;/b&gt;&lt;br&gt;Metrics · dashboards · log aggregation · alerting · deployment annotations" vertex="1">
+          <mxGeometry height="52" width="780" x="82" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="obs_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="20" width="56" x="80" y="302" as="geometry" />
+        </mxCell>
+        <mxCell id="apps_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#888780;fontStyle=2;" value="Applications" vertex="1">
+          <mxGeometry height="18" width="120" x="82" y="366" as="geometry" />
+        </mxCell>
+        <mxCell id="immich" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;strokeWidth=1.5;fontSize=12;fontColor=#085041;verticalAlign=middle;" value="&lt;b&gt;Immich&lt;/b&gt;&lt;br&gt;Photo library management&lt;br&gt;DAS integration (after backup verified)" vertex="1">
+          <mxGeometry height="72" width="240" x="82" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="immich_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#085041;strokeColor=none;fontColor=#9FE1CB;fontSize=10;fontStyle=1;" value="Phase 3" vertex="1">
+          <mxGeometry height="18" width="56" x="82" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="nextcloud" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;strokeWidth=1.5;fontSize=12;fontColor=#085041;verticalAlign=middle;" value="&lt;b&gt;Nextcloud&lt;/b&gt;&lt;br&gt;Personal cloud storage&lt;br&gt;Documents · notes · file sync" vertex="1">
+          <mxGeometry height="72" width="240" x="352" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="nextcloud_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#085041;strokeColor=none;fontColor=#9FE1CB;fontSize=10;fontStyle=1;" value="Phase 3" vertex="1">
+          <mxGeometry height="18" width="56" x="352" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="jellyfin" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#0F6E56;strokeWidth=1.5;fontSize=12;fontColor=#085041;verticalAlign=middle;" value="&lt;b&gt;Jellyfin&lt;/b&gt;&lt;br&gt;Media server&lt;br&gt;Films · TV · on-network streaming" vertex="1">
+          <mxGeometry height="72" width="240" x="622" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="jellyfin_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#085041;strokeColor=none;fontColor=#9FE1CB;fontSize=10;fontStyle=1;" value="Phase 3" vertex="1">
+          <mxGeometry height="18" width="56" x="622" y="388" as="geometry" />
+        </mxCell>
+        <mxCell id="storage_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=11;fontColor=#888780;fontStyle=2;" value="Storage" vertex="1">
+          <mxGeometry height="18" width="80" x="82" y="472" as="geometry" />
+        </mxCell>
+        <mxCell id="longhorn" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;Longhorn&lt;/b&gt;&lt;br&gt;Persistent volumes for stateful workloads&lt;br&gt;Cluster-native block storage" vertex="1">
+          <mxGeometry height="72" width="375" x="82" y="494" as="geometry" />
+        </mxCell>
+        <mxCell id="longhorn_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="18" width="56" x="82" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="minio" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;MinIO&lt;/b&gt;&lt;br&gt;S3-compatible object storage&lt;br&gt;Backups · application data · photo exports" vertex="1">
+          <mxGeometry height="72" width="375" x="487" y="494" as="geometry" />
+        </mxCell>
+        <mxCell id="minio_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="18" width="56" x="487" y="496" as="geometry" />
+        </mxCell>
+        <mxCell id="tailscale" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;strokeWidth=1.5;fontSize=12;fontColor=#3C3489;verticalAlign=middle;" value="&lt;b&gt;Tailscale VPN&lt;/b&gt;&lt;br&gt;Mesh VPN · VPN-first access model&lt;br&gt;No public internet exposure by default" vertex="1">
+          <mxGeometry height="72" width="375" x="82" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="tailscale_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=10;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="18" width="56" x="82" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="sealed_secrets" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;strokeWidth=1.5;fontSize=12;fontColor=#3C3489;verticalAlign=middle;" value="&lt;b&gt;Sealed Secrets&lt;/b&gt;&lt;br&gt;Encrypted secrets · safe to commit to Git&lt;br&gt;No credentials ever in plaintext" vertex="1">
+          <mxGeometry height="72" width="375" x="487" y="582" as="geometry" />
+        </mxCell>
+        <mxCell id="sealed_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="18" width="56" x="487" y="584" as="geometry" />
+        </mxCell>
+        <mxCell id="platform_cli" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#854F0B;strokeWidth=1.5;fontSize=12;fontColor=#633806;verticalAlign=middle;" value="&lt;b&gt;Platform CLI + Helm chart templates&lt;/b&gt;&lt;br&gt;One-command app deployment · reusable chart library · developer onboarding docs" vertex="1">
+          <mxGeometry height="52" width="780" x="82" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="cli_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#854F0B;strokeColor=none;fontColor=#FAC775;fontSize=10;fontStyle=1;" value="Phase 4" vertex="1">
+          <mxGeometry height="20" width="56" x="82" y="670" as="geometry" />
+        </mxCell>
+        <mxCell id="ollama" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#854F0B;strokeWidth=1;fontSize=12;fontColor=#633806;verticalAlign=middle;dashed=1;opacity=60;" value="&lt;b&gt;Ollama · local LLM inference&lt;/b&gt;   [STRETCH GOAL — Phase 4+]&lt;br&gt;On-cluster AI · commit messages · issue triage · changelog generation · hardware-dependent" vertex="1">
+          <mxGeometry height="52" width="780" x="82" y="736" as="geometry" />
+        </mxCell>
+        <mxCell id="ollama_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#854F0B;strokeColor=none;fontColor=#FAC775;fontSize=10;fontStyle=3;opacity=70;" value="Phase 4+" vertex="1">
+          <mxGeometry height="20" width="56" x="82" y="736" as="geometry" />
+        </mxCell>
+        <mxCell id="rpi" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=2;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;Raspberry Pi&lt;/b&gt;&lt;br&gt;Edge / management node (outside k3s cluster)&lt;br&gt;DNS · VPN gateway · monitoring exporter&lt;br&gt;&lt;i&gt;Standalone — not part of the cluster&lt;/i&gt;" vertex="1">
+          <mxGeometry height="84" width="320" x="66" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="rpi_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=10;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="18" width="56" x="66" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="das" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAECE7;strokeColor=#993C1D;strokeWidth=2;fontSize=12;fontColor=#712B13;verticalAlign=middle;" value="&lt;b&gt;DAS — Direct Attached Storage&lt;/b&gt;&lt;br&gt;USB-attached · primary personal photo library&lt;br&gt;⚠ READ-ONLY at all times · not cluster-mounted until Phase 3&lt;br&gt;Gate: verified backup + tested restore procedure required first" vertex="1">
+          <mxGeometry height="84" width="500" x="420" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="das_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#085041;strokeColor=none;fontColor=#9FE1CB;fontSize=10;fontStyle=1;" value="Phase 3" vertex="1">
+          <mxGeometry height="18" width="56" x="420" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_label" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;fontSize=13;fontColor=#5F5E5A;fontStyle=3;" value="External services" vertex="1">
+          <mxGeometry height="20" width="200" x="1100" y="118" as="geometry" />
+        </mxCell>
+        <mxCell id="github" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;GitHub&lt;/b&gt;&lt;br&gt;Repo · Actions · Issues · Milestones&lt;br&gt;Copilot agent · CodeRabbit · Dependabot" vertex="1">
+          <mxGeometry height="72" width="280" x="1100" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="github_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3C3489;strokeColor=none;fontColor=#CECBF6;fontSize=10;fontStyle=1;" value="Phase 1" vertex="1">
+          <mxGeometry height="18" width="56" x="1100" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="letsencrypt" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;Let&#39;s Encrypt&lt;/b&gt;&lt;br&gt;Automated TLS certificate issuance&lt;br&gt;via cert-manager ACME challenge" vertex="1">
+          <mxGeometry height="68" width="280" x="1100" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="le_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0C447C;strokeColor=none;fontColor=#B5D4F4;fontSize=10;fontStyle=1;" value="Phase 2" vertex="1">
+          <mxGeometry height="18" width="56" x="1100" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="aws" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;AWS S3 + Glacier&lt;/b&gt;&lt;br&gt;Offsite backup destination · disaster recovery&lt;br&gt;Cost-capped · billing alerts configured first" vertex="1">
+          <mxGeometry height="68" width="280" x="1100" y="326" as="geometry" />
+        </mxCell>
+        <mxCell id="aws_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5F5E5A;strokeColor=none;fontColor=#D3D1C7;fontSize=10;fontStyle=1;" value="Phase 5" vertex="1">
+          <mxGeometry height="18" width="56" x="1100" y="328" as="geometry" />
+        </mxCell>
+        <mxCell id="terraform" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F1EFE8;strokeColor=#5F5E5A;strokeWidth=1.5;fontSize=12;fontColor=#444441;verticalAlign=middle;" value="&lt;b&gt;Terraform / OpenTofu&lt;/b&gt;&lt;br&gt;Cloud IaC · AWS resource provisioning&lt;br&gt;No manual console provisioning allowed" vertex="1">
+          <mxGeometry height="68" width="280" x="1100" y="412" as="geometry" />
+        </mxCell>
+        <mxCell id="tf_phase" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#5F5E5A;strokeColor=none;fontColor=#D3D1C7;fontSize=10;fontStyle=1;" value="Phase 5" vertex="1">
+          <mxGeometry height="18" width="56" x="1100" y="414" as="geometry" />
+        </mxCell>
+        <mxCell id="gitops_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#888780;strokeWidth=1;fontSize=11;fontColor=#5F5E5A;verticalAlign=middle;dashed=1;dashPattern=4 3;" value="&lt;b&gt;GitOps loop&lt;/b&gt;&lt;br&gt;Push to main&lt;br&gt;→ GitHub Actions CI&lt;br&gt;→ ArgoCD reconciles cluster&lt;br&gt;→ Grafana deployment annotation&lt;br&gt;&lt;br&gt;No manual kubectl apply in normal ops." vertex="1">
+          <mxGeometry height="130" width="280" x="1100" y="498" as="geometry" />
+        </mxCell>
+        <mxCell id="security_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAECE7;strokeColor=#993C1D;strokeWidth=1.5;fontSize=11;fontColor=#712B13;verticalAlign=middle;" value="&lt;b&gt;Security model — always enforced&lt;/b&gt;&lt;br&gt;· VPN-first: no direct public exposure&lt;br&gt;· Secrets never in Git (Sealed Secrets)&lt;br&gt;· Authentik SSO on every service&lt;br&gt;· Defence in depth: VPN + SSO + RBAC&lt;br&gt;· Public repo: shape only, never keys/IPs&lt;br&gt;· Minimal attack surface at all times" vertex="1">
+          <mxGeometry height="140" width="280" x="1100" y="646" as="geometry" />
+        </mxCell>
+        <mxCell id="adr_note" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#888780;strokeWidth=1;fontSize=11;fontColor=#5F5E5A;verticalAlign=middle;dashed=1;dashPattern=4 3;" value="&lt;b&gt;ADRs govern every technology choice&lt;/b&gt;&lt;br&gt;docs/adrs/ in public repository&lt;br&gt;ADR-001 through ADR-009 planned&lt;br&gt;Written before implementation begins&lt;br&gt;First-class portfolio artefacts" vertex="1">
+          <mxGeometry height="100" width="280" x="1100" y="804" as="geometry" />
+        </mxCell>
+        <mxCell id="e_github_argocd" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#534AB7;strokeWidth=1.5;fontColor=#534AB7;fontSize=10;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.3;entryDx=0;entryDy=0;" target="argocd" value="GitOps pull">
+          <mxGeometry relative="1" x="0.4051" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="981" y="186" />
+              <mxPoint x="981" y="220" />
+              <mxPoint x="862" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_github_ci" edge="1" parent="1" source="github" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#534AB7;strokeWidth=1.5;fontColor=#534AB7;fontSize=10;endArrow=open;endFill=0;dashed=1;exitX=0;exitY=0.7;exitDx=0;exitDy=0;entryX=1;entryY=0.7;entryDx=0;entryDy=0;" target="argocd" value="triggers CI">
+          <mxGeometry relative="1" x="0.5514" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="970" y="200" />
+              <mxPoint x="970" y="266" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_le_ingress" edge="1" parent="1" source="letsencrypt" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#185FA5;strokeWidth=1.5;fontColor=#185FA5;fontSize=10;endArrow=block;endFill=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="ingress" value="issues certs">
+          <mxGeometry relative="1" x="-0.6429" y="-4" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="1000" y="274" />
+              <mxPoint x="1000" y="176" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_minio_aws" edge="1" parent="1" source="minio" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#854F0B;strokeWidth=1.5;fontColor=#854F0B;fontSize=10;endArrow=block;endFill=1;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="aws" value="backup replication">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tf_aws" edge="1" parent="1" source="terraform" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#5F5E5A;strokeWidth=1.5;fontColor=#5F5E5A;fontSize=10;endArrow=block;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="aws" value="provisions">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_das_immich" edge="1" parent="1" source="das" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#993C1D;strokeWidth=2;fontColor=#993C1D;fontSize=10;endArrow=block;endFill=1;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" value="read-only mount (Phase 3+)">
+          <mxGeometry relative="1" x="-0.6538" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="400" y="862" />
+              <mxPoint x="400" y="808" />
+              <mxPoint x="50" y="808" />
+              <mxPoint x="50" y="432" />
+            </Array>
+            <mxPoint x="380.00000000000045" y="818" as="sourcePoint" />
+            <mxPoint x="82" y="432" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_auth_ingress" edge="1" parent="1" source="authentik" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#185FA5;strokeWidth=1;fontColor=#185FA5;fontSize=10;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;" target="ingress" value="SSO protection">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_argocd_obs" edge="1" parent="1" source="argocd" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#185FA5;strokeWidth=1;fontColor=#185FA5;fontSize=10;endArrow=open;endFill=0;dashed=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" target="observability" value="deployment events">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ts_pi" edge="1" parent="1" source="tailscale" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#534AB7;strokeWidth=1.5;fontColor=#534AB7;fontSize=10;endArrow=block;endFill=0;startArrow=block;startFill=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="rpi" value="VPN mesh">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="70" y="618" />
+              <mxPoint x="70" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
