@@ -2,7 +2,7 @@
 name: Documentation
 description: "Use when creating or updating Markdown documentation, ADRs, runbooks, architecture docs, diagrams, the docs registry, or README. Handles docs/registry.md updates, Mermaid diagrams, draw.io XML generation, and documentation PRs."
 argument-hint: "Describe the documentation task, e.g., 'Create a runbook for certificate renewal' or 'Update the architecture doc to reflect the new ingress controller'"
-tools: [read, edit, search]
+tools: [vscode, execute, read, edit, search, web, todo]
 ---
 
 # Documentation Agent Instructions
