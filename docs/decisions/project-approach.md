@@ -2,7 +2,7 @@
 
 > **Version:** 1.0
 > **Status:** Living document
-> **Related:** [`docs/architecture.md`](./architecture.md) · [`docs/contributing/`](./contributing/)
+> **Related:** [`docs/architecture.md`](../architecture.md) · [`docs/contributing/`](../contributing/)
 
 ---
 
@@ -207,6 +207,6 @@ template includes a mandatory documentation checklist that must be completed
 before merge; and a dedicated documentation agent
 (`.github/agents/documentation-agent.md`) is available to create and update
 documents as an assigned task. The documentation skill file at
-`docs/contributing/documentation-skill.md` defines the conventions, tone,
+`.agents/skills/documentation/SKILL.md` defines the conventions, tone,
 structure, and diagram standards that all documentation in this repository
 follows — whether written by a human or an agent.
