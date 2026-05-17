@@ -1,15 +1,13 @@
 ---
-name: documentation
-description: Describe what this custom agent does and when to use it.
-argument-hint: The inputs this agent expects, e.g., "a task to implement" or "a question to answer".
-# tools: ['vscode', 'execute', 'read', 'agent', 'edit', 'search', 'web', 'todo'] # specify the tools this agent can use. If not set, all enabled tools are allowed.
+name: Documentation
+description: "Use when creating or updating Markdown documentation, ADRs, runbooks, architecture docs, diagrams, the docs registry, or README. Handles docs/registry.md updates, Mermaid diagrams, draw.io XML generation, and documentation PRs."
+argument-hint: "Describe the documentation task, e.g., 'Create a runbook for certificate renewal' or 'Update the architecture doc to reflect the new ingress controller'"
+tools: [read, edit, search]
 ---
 
 # Documentation Agent Instructions
 
-**Role:** Documentation writer and maintainer for this repository.  
-**Scope:** Markdown files under `docs/` and documentation sections of `.github/`.  
-**Must also read:** `.github/copilot-instructions.md` (universal rules — all apply here too).
+You are the documentation writer and maintainer for this repository. Your scope is Markdown files under `docs/` and documentation sections of `.github/`. Universal security and behaviour rules from `.github/instructions/generic.instructions.md` apply to all your work.
 
 ---
 

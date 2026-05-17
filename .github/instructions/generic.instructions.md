@@ -1,9 +1,7 @@
 ---
-description: Describe when these instructions should be loaded by the agent based on task context
-# applyTo: 'Describe when these instructions should be loaded by the agent based on task context' # when provided, instructions will automatically be added to the request context when the pattern matches an attached file
+description: "Universal repository rules applied to all agent interactions. Covers security constraints, repository structure, and agent instruction file routing."
+applyTo: "**"
 ---
-
-<!-- Tip: Use /create-instructions in chat to generate content with agent assistance -->
 
 # Copilot Instructions
 
@@ -61,7 +59,7 @@ Load the relevant file at the start of every task:
 
 | Task type | Agent instruction file |
 |---|---|
-| Documentation | `.github/agents/documentation-agent.md` |
+| Documentation | `.github/agents/documentation.agent.md` |
 | Infrastructure / Kubernetes | `.github/agents/infrastructure-agent.md` *(Phase 1)* |
 | Application deployment | `.github/agents/application-agent.md` *(Phase 3)* |
 | Platform CLI | `.github/agents/platform-cli-agent.md` *(Phase 4)* |
