@@ -255,14 +255,14 @@ Each ADR contains the following sections:
 
 | ADR | Topic | Status |
 |---|---|---|
-| [ADR-001](./adrs/ADR-001.md) | Cluster distribution choice — k3s vs Talos Linux vs kubeadm | Accepted |
-| [ADR-002](./adrs/ADR-002.md) | GitOps tooling — ArgoCD vs FluxCD | Accepted |
-| [ADR-003](./adrs/ADR-003.md) | Persistent storage — Longhorn vs Ceph vs NFS | Accepted |
-| [ADR-004](./adrs/ADR-004.md) | Observability stack — Prometheus/Grafana/Loki vs alternatives | Accepted |
+| [ADR-001](./adrs/ADR-001.md) | Cluster distribution choice — k3s vs Talos Linux vs kubeadm | Proposed |
+| [ADR-002](./adrs/ADR-002.md) | GitOps tooling — ArgoCD vs FluxCD | Proposed |
+| [ADR-003](./adrs/ADR-003.md) | Persistent storage — Longhorn vs Ceph vs NFS | Proposed |
+| [ADR-004](./adrs/ADR-004.md) | Observability stack — Prometheus/Grafana/Loki vs alternatives | Proposed |
 | [ADR-005](./adrs/ADR-005.md) | Application selection — Immich, Nextcloud, Jellyfin | Proposed |
 | [ADR-006](./adrs/ADR-006.md) | Platform CLI design — language, interface, scope | Proposed |
 | [ADR-007](./adrs/ADR-007.md) | Hybrid cloud architecture — AWS vs GCP vs self-hosted only | Proposed |
-| [ADR-008](./adrs/ADR-008.md) | CI/CD architecture — self-hosted vs hosted runners, bootstrap dependency | Accepted |
-| [ADR-009](./adrs/ADR-009.md) | AI tooling strategy — Copilot, CodeRabbit, local LLM stretch goal | Proposed |
+| [ADR-008](./adrs/ADR-008.md) | CI/CD architecture — self-hosted vs hosted runners, bootstrap dependency | Proposed |
+| [ADR-009](./adrs/ADR-009.md) | AI tooling strategy — Copilot, CodeRabbit, local LLM stretch goal | Accepted |
 
-> ADR-001, ADR-002, and ADR-008 are marked Accepted as their decisions are reflected in the current architecture. Remaining ADRs move to Accepted status as each phase begins.
+> ADRs move to Accepted status when the document is written and committed to `docs/adrs/`. Proposed means the decision is anticipated but the ADR file has not yet been written.
