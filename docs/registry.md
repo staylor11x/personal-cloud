@@ -1,6 +1,6 @@
 # Documentation registry
 
-> **Version:** 1.5
+> **Version:** 1.6
 > **Status:** Living document — updated whenever a living document is created, modified, or removed
 > **Related:** [docs/contributing/README.md](./contributing/README.md)
 
@@ -15,13 +15,14 @@ This file is the authoritative index of every living document in the repository.
 | [docs/architecture.md](./architecture.md) | Platform architecture — hardware, technology stack, security model, phase sequencing rationale, and ADR index | 1.0 | 2026-05-17 | Architecture changes, new ADRs accepted, hardware inventory changes, phase transitions |
 | [docs/decisions/ai-engineering-approach.md](./decisions/ai-engineering-approach.md) | AI engineering governance — usage principles, tool roles, context-loading model, and issue quality contract | 1.1 | 2026-05-23 | AI workflow changes, agent context model changes, tooling policy changes, or issue quality requirements change |
 | [docs/decisions/project-approach.md](./decisions/project-approach.md) | Project operating model — AI-native workflow, tooling inventory, cost policy, per-phase definition of success, and documentation strategy | 1.1 | 2026-05-23 | Workflow or tooling changes, cost policy changes, phase completion |
-| [docs/contributing/README.md](./contributing/README.md) | Purpose and contents of the docs/contributing directory | 1.0 | 2026-05-17 | Contents of docs/contributing change |
+| [docs/contributing/README.md](./contributing/README.md) | Purpose and contents of the docs/contributing directory | 1.1 | 2026-05-23 | Contents of docs/contributing change |
 | [.agents/skills/documentation/SKILL.md](../.agents/skills/documentation/SKILL.md) | Documentation standards for agents — writing conventions, diagram selection, structure standards, and maintenance protocol | 1.0 | 2026-05-17 | Documentation conventions change or new document types are added |
+| [docs/contributing/templates/issue-template.md](./contributing/templates/issue-template.md) | Template for agent-targeted GitHub issues — required sections, phase and ADR metadata, and documentation update criterion | 1.0 | 2026-05-23 | Issue process changes or required sections are added or removed |
 | [docs/contributing/templates/adr-template.md](./contributing/templates/adr-template.md) | Template for Architecture Decision Records — required sections, metadata format, and guidance notes | 1.0 | 2026-05-17 | ADR process changes or required sections are added or removed |
 | [docs/contributing/templates/runbook-template.md](./contributing/templates/runbook-template.md) | Template for operational runbooks — required sections, step structure, and guidance notes | 1.0 | 2026-05-17 | Runbook process changes or required sections are added or removed |
 | [docs/contributing/templates/architecture-update.md](./contributing/templates/architecture-update.md) | Checklist for updating docs/architecture.md — pre-update, update, and post-update steps | 1.0 | 2026-05-17 | Architecture update process changes |
 | [.github/PULL_REQUEST_TEMPLATE.md](../.github/PULL_REQUEST_TEMPLATE.md) | PR template — required sections and documentation checklist enforced on every pull request | 1.0 | 2026-05-17 | PR process changes or checklist items are added or removed |
-| [docs/registry.md](./registry.md) | Index of all living documents with version, coverage summary, and update triggers | 1.5 | 2026-05-23 | Any living document is created, modified, or removed |
+| [docs/registry.md](./registry.md) | Index of all living documents with version, coverage summary, and update triggers | 1.6 | 2026-05-23 | Any living document is created, modified, or removed |
 | [README.md](../README.md) | Repository landing page — platform description, repository structure, key document navigation, architecture diagram, and security overview | 1.0 | 2026-05-23 | Platform name changes, repository structure changes, key documents added or removed |
 | [scripts/README.md](../scripts/README.md) | Usage reference for scripts/ — upload-issues.sh interface, input file format, and operational notes | 1.0 | 2026-05-23 | Scripts added, removed, or their interface changes |
 | [.github/agents/infrastructure-agent.md](../.github/agents/infrastructure-agent.md) | Infrastructure agent instructions — role, absolute rules, manifest and Helm standards, phase constraints, and escalation conditions | 1.0 | 2026-05-23 | Infrastructure conventions change, phase scope changes, or new constraint types are added |
