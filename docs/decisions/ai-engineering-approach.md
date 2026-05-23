@@ -1,6 +1,6 @@
 # AI Engineering Approach
 
-> **Version:** 1.0
+> **Version:** 1.1
 > **Status:** Living document
 > **Related:** [`docs/decisions/project-approach.md`](./project-approach.md) · [`.github/agents/`](../../.github/agents/)
 
@@ -26,13 +26,15 @@ can be reverted via a standard Git revert.
 approves every change before it reaches the main branch. This gate is
 non-negotiable regardless of AI confidence.
 
-**Token-efficient.** Context is loaded on demand, not by default. Always-loaded
-instructions are kept to the absolute minimum. Task-specific guidance lives
-in agent files loaded only when relevant. [me] AI is not to conduct work that can otherwise be handled by other automation i.e. bash scripting, etc.
+**Automation-first.** AI is not used for deterministic, repeatable tasks
+that have no judgment component. If a bash script can do it reliably,
+write the script. AI tokens are reserved for work that requires reasoning,
+generation, or contextual judgment.
 
-**IDE-agnostic.** Agent instruction files are plain markdown documents in the
-repository. They are not coupled to any specific tool. Switching from Copilot
-to Cursor to Claude Code requires no changes to the agent files themselves.
+**IDE-agnostic.** Agent instruction files are plain markdown documents in
+the repository. Switching between Copilot, Cursor, or Claude Code requires
+no changes to the agent files — only the mechanism for loading them differs
+by tool (see [Context architecture](#context-architecture)).
 
 **Quality-in quality-out.** Agent output quality is directly proportional to
 issue quality. Vague issues produce vague implementations. The issue template
@@ -56,22 +58,35 @@ No tool in this list has merge authority. No tool bypasses secret scanning.
 
 ## Context architecture
 
+Agent instruction files are plain markdown. Any AI tool can be pointed at
+them explicitly. The only tool-specific behaviour is auto-loading.
+
 ```
-.github/copilot-instructions.md   ← always loaded, ~40 lines, universal rules only [me] Is this not vscode specific how does this work for claude code?
+.github/copilot-instructions.md
         │
-        └── .github/agents/       ← loaded on demand, one file per task type [me] Again is this code vscode specific?
+        │  Auto-loaded by GitHub Copilot only.
+        │  ~40 lines. Universal rules and routing table.
+        │  For all other tools, load manually.
+        │
+        └── .github/agents/          ← one file per task type, loaded on demand
                 documentation-agent.md
                 infrastructure-agent.md
                 application-agent.md
-                ...
+
+.agents/skills/                      ← VS Code Copilot skill file convention
+        documentation/
+                SKILL.md             ← judgment and convention detail
 
 docs/contributing/
-        documentation-skill.md    ← judgment and convention detail, agent-referenced    [me] is this the correct convention for location of skill files?
-        templates/                ← document structure, referenced by agents
+        templates/                   ← document structure, referenced by agents
 ```
 
 Always-loaded context contains only: security absolutes, repo navigation,
 and the routing table to agent files. Everything else is on demand.
+
+**Using agent files outside Copilot:** point the tool at the relevant file
+explicitly at the start of the session — e.g. in Claude Code:
+`read .github/agents/infrastructure-agent.md` before beginning the task.
 
 ---
 
@@ -83,10 +98,10 @@ Every agent-targeted issue must contain:
 - Specific, scoped title in imperative mood
 - Context explaining why the work is needed and which phase it belongs to
 - Numbered, testable acceptance criteria
-- Explicit list of files the agent should touch [me] Are these points useful?
-- Explicit list of files the agent must not touch [me] Are these points useful?
+- Explicit list of files the agent should touch
+- Explicit list of files the agent must not touch
 - Constraints — things the agent must not do
-- Which agent instruction file to load [me] Should we let the agent figure out this itself? Is it efficient to predict this? Is it token efficient?
+- Which agent instruction file to load
 
 Issues that omit these fields produce unpredictable output. The
 `scripts/upload-issues.sh` script and the issue template exist to make
@@ -94,14 +109,15 @@ compliance the path of least resistance.
 
 ---
 
-## What AI does not decide
+## What AI does not decide unilaterally
 
-AI tooling in this project does not:
-
-- Make architectural decisions — those require an ADR and human sign-off (Realistically the AI is working with the human to write these ADRs)
-- Merge pull requests — every merge requires human approval
-- Modify the DAS or any safety-gated resource
-- Select new tools not already listed in this document or an ADR
+- **Architectural decisions** — AI assists in researching and drafting ADRs
+  but every ADR requires human sign-off before it moves to Accepted status
+- **Merging pull requests** — every merge requires human approval
+- **Safety-gated operations** — the DAS and any resource with an explicit
+  gate condition in `docs/architecture.md` require human confirmation
+- **New tooling adoption** — tools not listed in this document or an ADR
+  are not used without a documented decision
 
 When an agent encounters a decision outside its scope it stops, comments
-on the issue, and waits. It does not proceed and correct later.
+on the issue, and waits. It does not proceed and correct later.# AI Engineering Approach
