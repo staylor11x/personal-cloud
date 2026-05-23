@@ -1,8 +1,8 @@
 # Project Approach
 
-> **Version:** 1.0
+> **Version:** 1.1
 > **Status:** Living document
-> **Related:** [`docs/architecture.md`](../architecture.md) · [`docs/contributing/`](../contributing/)
+> **Related:** [`docs/architecture.md`](../architecture.md) · [`docs/decisions/ai-engineering-approach.md`](./ai-engineering-approach.md) · [`docs/contributing/`](../contributing/)
 
 ---
 

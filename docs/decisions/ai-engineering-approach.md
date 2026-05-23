@@ -1,7 +1,7 @@
 # AI Engineering Approach
 
 > **Version:** 1.1
-> **Status:** Living document
+> **Status:** Living document — updated when AI workflow, tool policy, or agent context-loading conventions change
 > **Related:** [`docs/decisions/project-approach.md`](./project-approach.md) · [`.github/agents/`](../../.github/agents/)
 
 ---
@@ -120,4 +120,4 @@ compliance the path of least resistance.
   are not used without a documented decision
 
 When an agent encounters a decision outside its scope it stops, comments
-on the issue, and waits. It does not proceed and correct later.# AI Engineering Approach
+on the issue, and waits. It does not proceed and correct later.
