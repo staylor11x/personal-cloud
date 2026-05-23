@@ -1,6 +1,6 @@
 # Documentation registry
 
-> **Version:** 1.4
+> **Version:** 1.5
 > **Status:** Living document — updated whenever a living document is created, modified, or removed
 > **Related:** [docs/contributing/README.md](./contributing/README.md)
 
@@ -21,6 +21,7 @@ This file is the authoritative index of every living document in the repository.
 | [docs/contributing/templates/runbook-template.md](./contributing/templates/runbook-template.md) | Template for operational runbooks — required sections, step structure, and guidance notes | 1.0 | 2026-05-17 | Runbook process changes or required sections are added or removed |
 | [docs/contributing/templates/architecture-update.md](./contributing/templates/architecture-update.md) | Checklist for updating docs/architecture.md — pre-update, update, and post-update steps | 1.0 | 2026-05-17 | Architecture update process changes |
 | [.github/PULL_REQUEST_TEMPLATE.md](../.github/PULL_REQUEST_TEMPLATE.md) | PR template — required sections and documentation checklist enforced on every pull request | 1.0 | 2026-05-17 | PR process changes or checklist items are added or removed |
-| [docs/registry.md](./registry.md) | Index of all living documents with version, coverage summary, and update triggers | 1.4 | 2026-05-23 | Any living document is created, modified, or removed |
+| [docs/registry.md](./registry.md) | Index of all living documents with version, coverage summary, and update triggers | 1.5 | 2026-05-23 | Any living document is created, modified, or removed |
 | [README.md](../README.md) | Repository landing page — platform description, repository structure, key document navigation, architecture diagram, and security overview | 1.0 | 2026-05-23 | Platform name changes, repository structure changes, key documents added or removed |
 | [scripts/README.md](../scripts/README.md) | Usage reference for scripts/ — upload-issues.sh interface, input file format, and operational notes | 1.0 | 2026-05-23 | Scripts added, removed, or their interface changes |
+| [.github/agents/infrastructure-agent.md](../.github/agents/infrastructure-agent.md) | Infrastructure agent instructions — role, absolute rules, manifest and Helm standards, phase constraints, and escalation conditions | 1.0 | 2026-05-23 | Infrastructure conventions change, phase scope changes, or new constraint types are added |
