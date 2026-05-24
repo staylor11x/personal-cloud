@@ -12,7 +12,8 @@ This file is the authoritative index of every living document in the repository.
 
 | Document | Covers | Version | Last verified | Update trigger |
 |---|---|---|---|---|
-| [docs/architecture.md](./architecture.md) | Platform architecture — hardware, technology stack, security model, phase sequencing rationale, and ADR index | 1.0 | 2026-05-23 | Architecture changes, new ADRs accepted, hardware inventory changes, phase transitions |
+| [docs/architecture.md](./architecture.md) | Platform architecture — hardware, technology stack, security model, phase sequencing rationale, and ADR index | 1.0 | 2026-05-17 | Architecture changes, new ADRs accepted, hardware inventory changes, phase transitions |
+| [docs/adrs/ADR-001.md](./adrs/ADR-001.md) | ADR-001: Cluster distribution — evaluation of k3s, Talos Linux, and kubeadm; decision to use k3s on Ubuntu Server | 1.0 | 2026-05-24 | Kubernetes distribution changes or hardware profile changes significantly |
 | [docs/adrs/ADR-009.md](./adrs/ADR-009.md) | ADR-009: AI tooling strategy — Copilot, CodeRabbit, GitHub Actions CI/CD, dual-runner strategy, and Ollama stretch goal | 1.0 | 2026-05-23 | AI tooling decisions change or Ollama stretch goal is activated |
 | [docs/decisions/ai-engineering-approach.md](./decisions/ai-engineering-approach.md) | AI engineering governance — usage principles, tool roles, context-loading model, and issue quality contract | 1.1 | 2026-05-23 | AI workflow changes, agent context model changes, tooling policy changes, or issue quality requirements change |
 | [docs/decisions/project-approach.md](./decisions/project-approach.md) | Project operating model — AI-native workflow, tooling inventory, cost policy, per-phase definition of success, and documentation strategy | 1.1 | 2026-05-23 | Workflow or tooling changes, cost policy changes, phase completion |
