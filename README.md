@@ -48,7 +48,7 @@ The platform runs on a single-node Kubernetes cluster hosted on a Dell laptop, w
 | Runbooks | [docs/runbooks/](docs/runbooks/) | Operational procedures for common tasks and incident response |
 | Documentation contributing guide | [docs/contributing/](docs/contributing/) | Writing standards, templates, and documentation maintenance protocol |
 | Living document registry | [docs/registry.md](docs/registry.md) | Index of all living documents with version, coverage, and update triggers |
-| Architecture diagram | [docs/diagrams/architecture-v1.png](docs/diagrams/architecture-v1.png) | Visual overview of the platform architecture |
+| Architecture diagram | [docs/diagrams/architecture-v1.drawio.png](docs/diagrams/architecture-v1.png) | Visual overview of the platform architecture |
 
 ---
 
