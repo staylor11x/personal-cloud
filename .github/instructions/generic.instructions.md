@@ -59,7 +59,9 @@ Load the relevant file at the start of every task:
 
 | Task type | Agent instruction file |
 |---|---|
-| Documentation | `.github/agents/documentation.agent.md` |
-| Infrastructure / Kubernetes | `.github/agents/infrastructure-agent.md` *(Phase 1)* |
-| Application deployment | `.github/agents/application-agent.md` *(Phase 3)* |
+| All issues (single entry point) | `.github/agents/platform.agent.md` |
+| Documentation (subagent only) | `.github/agents/documentation.agent.md` |
+| Infrastructure / Kubernetes (subagent only) | `.github/agents/infrastructure-agent.md` *(Phase 1)* |
+| Application deployment (subagent only) | `.github/agents/application-agent.md` *(Phase 3)* |
+| Git operations (subagent only) | `.github/agents/git-ops.agent.md` |
 | Platform CLI | `.github/agents/platform-cli-agent.md` *(Phase 4)* |

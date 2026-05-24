@@ -3,6 +3,8 @@ name: Documentation
 description: "Use when creating or updating Markdown documentation, ADRs, runbooks, architecture docs, diagrams, the docs registry, or README. Handles docs/registry.md updates, Mermaid diagrams, draw.io XML generation, and documentation PRs."
 argument-hint: "Describe the documentation task, e.g., 'Create a runbook for certificate renewal' or 'Update the architecture doc to reflect the new ingress controller'"
 tools: [vscode, execute, read, edit, search, web, todo]
+model: [Claude Sonnet 4.6 (copilot)]
+user-invocable: false
 ---
 
 # Documentation Agent Instructions
@@ -145,4 +147,16 @@ Every PR opened by this agent must include:
 - Document accuracy against current system state
 - Tone and consistency with existing documentation
 - Confirm no information has been unintentionally removed
+```
+
+---
+
+## Return value
+
+When called by the Platform orchestrator, do not commit, push, or create a PR. Return a plain list of every file created or modified so the orchestrator can pass them to GitOps.
+
+```
+Modified files:
+- docs/adrs/ADR-001.md
+- docs/registry.md
 ```

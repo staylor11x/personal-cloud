@@ -3,6 +3,8 @@ name: Infrastructure
 description: "Use when creating or modifying infrastructure files — Kubernetes manifests, Helm charts, k3s configuration, ArgoCD applications, GitHub Actions workflows, or Terraform definitions. Handles Phase 1–5 infrastructure work with DAS safety and secrets management enforcement."
 argument-hint: "Describe the infrastructure task, e.g., 'Create ArgoCD Application for Traefik' or 'Add k3s bootstrap script for Phase 1'"
 tools: [vscode, execute, read, edit, search, todo]
+model: [Claude Sonnet 4.6 (copilot)]
+user-invocable: false
 ---
 
 # Infrastructure Agent Instructions
@@ -155,4 +157,16 @@ Every PR opened by this agent must include the following checklist.
 - Manifest correctness against current cluster state
 - Secret placeholder completeness — every ${SECRET_NAME} has a Sealed Secret documented
 - Confirm no DAS references exist in Phase 1 or Phase 2 manifests
+```
+
+---
+
+## Return value
+
+When called by the Platform orchestrator, do not commit, push, or create a PR. Return a plain list of every file created or modified so the orchestrator can pass them to GitOps.
+
+```
+Modified files:
+- kubernetes/core/traefik/values.yaml
+- infrastructure/k3s-config.yaml
 ```

@@ -2,7 +2,9 @@
 name: Application deployment
 description: "Use when creating or modifying application-layer files — Kubernetes manifests for user-facing applications, ArgoCD Application definitions, application-specific Helm values, or backup configuration. Active from Phase 3. Enforces DAS safety gate, Authentik SSO requirement, and Sealed Secrets for all application credentials."
 argument-hint: "Describe the application task, e.g., 'Deploy Immich photo management application' or 'Add backup job for Nextcloud'"
-tools: [vscode, execute, read, edit, search, todo]
+tools: [vscode, execute, read, edit, search, todo, 'github/*']
+model: [Claude Sonnet 4.6 (copilot)]
+user-invocable: false
 ---
 
 # Application Agent Instructions
@@ -116,4 +118,16 @@ Every PR opened by this agent must include the following checklist.
 - Application accessibility and SSO authentication flow
 - Backup job correctness and restore verification
 - Confirm DAS is not referenced before the safety gate is met
+```
+
+---
+
+## Return value
+
+When called by the Platform orchestrator, do not commit, push, or create a PR. Return a plain list of every file created or modified so the orchestrator can pass them to GitOps.
+
+```
+Modified files:
+- kubernetes/apps/immich.yaml
+- helm-charts/immich/values.yaml
 ```

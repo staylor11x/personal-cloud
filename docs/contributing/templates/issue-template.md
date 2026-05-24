@@ -22,7 +22,7 @@ TITLE GUIDANCE
      2–4 sentences maximum. -->
 
 **Phase:** <!-- e.g. Phase 1 -->
-**Agent instructions to load:** <!-- e.g. `.github/agents/infrastructure-agent.md` -->
+**Agents:** <!-- Comma-separated list of specialists for the Platform agent to invoke: Infrastructure, Documentation, Application. E.g. "Infrastructure, Documentation" -->
 **Related ADR:** <!-- e.g. ADR-001, or "none" -->
 
 ---
