@@ -1,6 +1,6 @@
 # AI Engineering Approach
 
-> **Version:** 1.1
+> **Version:** 1.2
 > **Status:** Living document — updated when AI workflow, tool policy, or agent context-loading conventions change
 > **Related:** [`docs/decisions/project-approach.md`](./project-approach.md) · [`.github/agents/`](../../.github/agents/)
 
@@ -62,31 +62,63 @@ Agent instruction files are plain markdown. Any AI tool can be pointed at
 them explicitly. The only tool-specific behaviour is auto-loading.
 
 ```
-.github/copilot-instructions.md
+.github/instructions/generic.instructions.md
         │
-        │  Auto-loaded by GitHub Copilot only.
-        │  ~40 lines. Universal rules and routing table.
-        │  For all other tools, load manually.
+        │  Auto-loaded by VS Code Copilot. Universal security rules
+        │  and routing table. All issues start at platform.agent.md.
+        │  For other tools, load manually.
         │
-        └── .github/agents/          ← one file per task type, loaded on demand
-                documentation-agent.md
-                infrastructure-agent.md
-                application-agent.md
+        └── .github/agents/                    ← loaded on demand
+                platform.agent.md              ← single entry point — all issues start here
+                git-ops.agent.md               ← subagent only — all git operations
+                documentation.agent.md         ← subagent only
+                infrastructure-agent.md        ← subagent only
+                application-agent.md           ← subagent only
 
-.agents/skills/                      ← VS Code Copilot skill file convention
+.agents/skills/                                ← VS Code Copilot skill file convention
         documentation/
-                SKILL.md             ← judgment and convention detail
+                SKILL.md                       ← judgment and convention detail
 
 docs/contributing/
-        templates/                   ← document structure, referenced by agents
+        templates/                             ← document structure, referenced by agents
+
+scripts/
+        branch-name.sh                         ← deterministic branch name from issue number + title
 ```
 
 Always-loaded context contains only: security absolutes, repo navigation,
 and the routing table to agent files. Everything else is on demand.
 
-**Using agent files outside Copilot:** point the tool at the relevant file
+**Using agent files outside Copilot:** point the tool at the platform agent
 explicitly at the start of the session — e.g. in Claude Code:
-`read .github/agents/infrastructure-agent.md` before beginning the task.
+`read .github/agents/platform.agent.md` before beginning the task.
+
+---
+
+## Agent orchestration
+
+All work in this repository flows through a single Platform orchestrator agent. The orchestrator reads the issue, delegates to specialist subagents, and calls the GitOps subagent once at the end to produce a single PR. No specialist agent commits or pushes directly.
+
+```mermaid
+flowchart TD
+    A([Issue number received]) --> B[Read issue via GitHub MCP]
+    B --> C{Agents: field\npresent?}
+    C -- Yes --> F[Use field directly]
+    C -- No --> E[Classify from signals table]
+    E --> F
+    F --> G[Call specialists in order\nInfrastructure → Application → Documentation]
+    G --> H{Any specialist\nreturned escalation?}
+    H -- Yes --> I[Post escalation comment\nvia GitHub MCP]
+    I --> J([Workflow stopped — awaits human])
+    H -- No --> K[Collect all changed files]
+    K --> L[Call GitOps subagent]
+    L --> M[Generate branch name\nbash scripts/branch-name.sh]
+    M --> N[Create branch, stage, commit, push]
+    N --> O[Create PR via GitHub MCP]
+    O --> P([PR open for human review])
+```
+
+Deterministic steps — branch naming, PR creation — are handled by scripts and GitHub MCP rather than AI reasoning. AI tokens in the GitOps and Platform agents are reserved for commit message subject lines and PR body generation.
 
 ---
 
@@ -101,7 +133,7 @@ Every agent-targeted issue must contain:
 - Explicit list of files the agent should touch
 - Explicit list of files the agent must not touch
 - Constraints — things the agent must not do
-- Which agent instruction file to load
+- Which agents to invoke — listed in the `**Agents:**` field as a comma-separated list (e.g. `Infrastructure, Documentation`)
 
 Issues that omit these fields produce unpredictable output. The
 `scripts/upload-issues.sh` script and the issue template exist to make

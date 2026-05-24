@@ -1,6 +1,48 @@
 # scripts/
 
+> **Version:** 1.1
+> **Status:** Living document — updated when scripts are added, removed, or their interface changes
+
 Utility scripts for the personal-cloud platform.
+
+---
+
+## branch-name.sh
+
+Generates a feature branch name from a GitHub issue number and title. Called by the GitOps agent — do not invoke manually during normal workflow.
+
+### Requirements
+
+- `bash` 4 or later
+
+### Usage
+
+```bash
+./scripts/branch-name.sh <issue-number> "<issue-title>"
+```
+
+| Argument | Required | Description |
+|---|---|---|
+| `issue-number` | Yes | GitHub issue number (integer) |
+| `issue-title` | Yes | Full issue title, quoted |
+
+### Output
+
+```
+feature/#<issue-number>-<slug>
+```
+
+The slug is derived from the issue title: lowercased, non-alphanumeric characters replaced by hyphens, common stopwords stripped (articles, prepositions, conjunctions), limited to five words.
+
+### Examples
+
+```bash
+./scripts/branch-name.sh 19 "ADR-001: k3s vs Talos Linux vs kubeadm"
+# → feature/#19-adr-001-k3s-talos-linux
+
+./scripts/branch-name.sh 42 "Add Traefik ingress configuration for core services"
+# → feature/#42-traefik-ingress-configuration-core-services
+```
 
 ---
 
